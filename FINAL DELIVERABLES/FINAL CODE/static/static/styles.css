@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Cuprum:wght@400;500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Cuprum", sans-serif;
+  font-weight: 700;
+}
+
+nav h1 {
+  text-align: center;
+  padding: 1rem;
+  color: white;
+  /* background-color: #2827cc; */
+  background-color: blue;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  color: black;
+  padding: 0.5rem;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0;
+  list-style: none;
+  padding: 0.5rem;
+}
+
+nav ul li:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+section {
+  height: 85vh;
+}
+
+footer {
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  background-color: darkblue;
+}
+
+/* Login and Register */
+.cont,
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.head {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.inp {
+  margin-bottom: 1rem;
+  /* border: 2px solid #a3a3a3; */
+  border: 2px solid #758283;
+  width: 22%;
+  height: 2rem;
+  border-radius: 7px;
+  padding-left: 0.7rem;
+}
+
+.inp-btn {
+  width: 22%;
+  height: 2.2rem;
+  background-color: blue;
+  color: aliceblue;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 7px;
+}
+
+.inp-btn:hover {
+  background-color: #3944f7;
+}
+
+/* Index */
+.hero {
+  width: 100vw;
+  height: 50vh;
+}
+.img {
+  height: 100%;
+  width: 100vw;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  font-weight: 400;
+}
+
+.sub {
+  font-weight: 400;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.left,
+.right {
+  padding: 2.5rem;
+}
+
+.message {
+  color: red;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background-color: whitesmoke;
+}
+
+.logout-yes {
+  padding: 1rem;
+  background-color: darkblue;
+  color: white;
+}
+
+.logout-no {
+  padding: 1rem;
+  background-color: white;
+  color: darkblue;
+}
+
+#upload-btn {
+  padding: 1rem;
+  color: white;
+  background-color: darkblue;
+}
+
+#upload-btn:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: darkblue;
+}
+
+.row {
+  margin-top: 5rem;
+}
+
+.header {
+  margin-top: 3rem;
+  text-align: center;
+}
