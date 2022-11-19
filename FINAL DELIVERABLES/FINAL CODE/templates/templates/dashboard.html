@@ -1,0 +1,51 @@
+{% extends "base.html" %} {% block content %}
+
+<section>
+  <h1 class="header">Dashboard</h1>
+  {% if bad %}
+  <div id="message">{{ message }}</div>
+  {% else %}
+  <div id="message" style="color: green">{{message}}</div>
+  {% endif %}
+  <div class="row">
+    <!-- <div class="col">
+      <button id="camera-btn" onclick="accessCamera()">Open Camera</button>
+      <video id="video"></video>
+    </div> -->
+    <div class="col form">
+      <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="video" required />
+        <button id="upload-btn" type="submit">Upload Video</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    var isCameraOpen = false;
+    const cameraButton = document.getElementById("camera-btn");
+    const videoElem = document.getElementById("video");
+
+    async function accessCamera() {
+      isCameraOpen = !isCameraOpen;
+
+      if (isCameraOpen) {
+        let stream = null;
+        try {
+          stream = await navigator.mediaDevices.getUserMedia({
+            audio: true,
+            video: true,
+          });
+          videoElem.srcObject = stream;
+          videoElem.autoplay = true;
+        } catch (err) {
+          console.log(err);
+        }
+        cameraButton.innerText = "Close Camera";
+      } else {
+        window.location.reload();
+      }
+    }
+  </script>
+</section>
+
+{% endblock %}

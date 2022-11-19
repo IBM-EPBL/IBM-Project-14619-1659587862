@@ -1,0 +1,18 @@
+{% extends "base.html" %} {% block content %}
+
+<section style="text-align: center">
+  <h2 class="header">Prediction</h2>
+
+  {% if bad %}
+  <div id="message" style="color: red; margin-top: 3rem">{{ message }}</div>
+  {% else %}
+  <div id="message" style="color: green; margin-top: 3rem">{{message}}</div>
+  {% endif %}
+
+  <script>
+    document.addEventListener("DOMContentLoaded", async (e) => {
+      window.location.replace("/result-upload");
+    });
+  </script>
+</section>
+{% endblock %}
