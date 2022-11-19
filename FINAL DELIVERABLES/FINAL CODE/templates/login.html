@@ -1,0 +1,13 @@
+{% extends "base.html" %} {% block content %}
+
+<section class="cont">
+  <div class="message">{{ message }}</div>
+  <form class="form" method="post" action="/afterlogin">
+    <h1 class="head">Login</h1>
+    <input type="email" name="_id" class="inp" placeholder="email" />
+    <input type="password" name="psw" class="inp" placeholder="password" />
+    <input type="submit" class="inp-btn" value="Login" />
+  </form>
+</section>
+
+{% endblock %}

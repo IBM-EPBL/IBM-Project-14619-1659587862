@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/styles.css" />
+    <title>DeepEye</title>
+  </head>
+  <body>
+    <nav>
+      <h1>VirtualEye</h1>
+      <ul>
+        <li><a href="/">Home</a></li>
+        {% if request.cookies.get("isLoggedIn") == "True" %}
+        <li><a href="/dashboard">Dashboard</a></li>
+        <li><a href="/logout">Logout</a></li>
+        {% else %}
+        <li><a href="/login">Login</a></li>
+        <li><a href="/register">Register</a></li>
+        {% endif %}
+      </ul>
+    </nav>
+    <hr />
+
+    {% block content %}{% endblock %}
+
+    <footer>VirtualEye &copy; . All rights reserved.</footer>
+  </body>
+</html>

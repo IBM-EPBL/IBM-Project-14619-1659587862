@@ -1,0 +1,18 @@
+{% extends "base.html" %} {% block content %}
+
+<section class="cont">
+  {% if bad %}
+  <div class="message">{{ message }}</div>
+  {% else %}
+  <div class="message" style="color: green">{{ message }}</div>
+  {% endif %}
+  <form class="form" method="post" action="/afterreg">
+    <h1 class="head">Register</h1>
+    <input type="text" name="name" class="inp" placeholder="username" />
+    <input type="email" name="email" class="inp" placeholder="email" />
+    <input type="password" name="password" class="inp" placeholder="password" />
+    <input type="submit" class="inp-btn" value="Register" />
+  </form>
+</section>
+
+{% endblock %}
